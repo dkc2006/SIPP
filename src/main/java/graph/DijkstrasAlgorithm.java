@@ -1,8 +1,10 @@
 package graph;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.PriorityQueue;
 
-public class WeightedGraph {
+public class DijkstrasAlgorithm {
 
     public static void main(String[] args) {
         int v = 8;
@@ -77,7 +79,6 @@ public class WeightedGraph {
 
         @Override
         public int compareTo(Pair other) {
-
             return this.weight - other.weight; // Ascending order by weight
         }
     }
