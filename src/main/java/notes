@@ -1,0 +1,50 @@
+Strassen's Matrix Multiplication — Formulas : -->
+------------------------------------------------------------------
+
+Step 1: Calculate 7 Products (Strassen’s formulas) : ->
+
+Matrix A:
+
+| a  b |
+| c  d |
+
+Matrix B:
+
+| e  f |
+| g  h |
+
+
+
+
+M1 = (a + d) * (e + h)
+M2 = (c + d) * e
+M3 = a * (f - h)
+M4 = d * (g - e)
+M5 = (a + b) * h
+M6 = (c - a) * (e + f)
+M7 = (b - d) * (g + h)
+
+
+------------------------------------------------------------
+
+Step 2: Compute Result Matrix C = A × B : ->
+
+Now compute the result matrix:
+
+| C11  C12 |
+| C21  C22 |
+
+
+C11 = M1 + M4 - M5 + M7
+C12 = M3 + M5
+C21 = M2 + M4
+C22 = M1 - M2 + M3 + M6
+
+-------------------------------------------------------------
+
+✅ Time Complexity (T.C) of Strassen's Matrix Multiplication Algorithm
+
+T.C. ------------> O(n^2.81)
+
+-------------------------------------------------------------------------------------------------------------------
+
