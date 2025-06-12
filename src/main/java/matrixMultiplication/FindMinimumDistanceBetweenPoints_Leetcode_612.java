@@ -3,7 +3,7 @@
 import java.util.*;
 import java.lang.Math;
 
-public class FindMinimumDistanceBetweenPoints{
+public class FindMinimumDistanceBetweenPoints_Leetcode_612 {
 
     // Function to compute Euclidean distance between two points
     static double distance(double[] p1, double[] p2) {
@@ -92,7 +92,7 @@ public class FindMinimumDistanceBetweenPoints{
     }
 
     public static void main(String[] args) {
-        double[][] points = {{-1, -2}, {0, 0}, {1, 2}, {2, 3}};
+        double[][] points = {{-1, -1}, {0, 0}, {-1, -2}};
 
         double res = minDistance(points);
 
