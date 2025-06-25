@@ -1,6 +1,3 @@
-// Java program to find convex hull of a set of points. Refer 
-// https://www.geeksforgeeks.org/orientation-3-ordered-points/
-// for explanation of orientation()
 import java.util.*;
 
 class Point
