@@ -1,8 +1,6 @@
 // Java Program to find the Nth fibonacci number using 
 // Matrix Exponentiation
 
-import java.util.*;
-
 public class MatrixExponentiation {
 
     static final int MOD = 1000000007;
@@ -20,16 +18,14 @@ public class MatrixExponentiation {
 
         // Copy the result back to the first matrix
         for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < 2; j++) {
-                A[i][j] = C[i][j];
-            }
+            System.arraycopy(C[i], 0, A[i], 0, 2);
         }
     }
 
     // Function to find (Matrix M ^ expo)
     public static long[][] power(long[][] M, int expo) {
         // Initialize result with identity matrix
-        long[][] ans = { { 1, 0 }, { 0, 1 } };
+        long[][] ans = {{1, 0}, {0, 1}};
 
         // Fast exponentiation
         while (expo > 0) {
@@ -50,9 +46,9 @@ public class MatrixExponentiation {
             return 1;
         }
 
-        long[][] M = { { 1, 1 }, { 1, 0 } };
+        long[][] M = {{1, 1}, {1, 0}};
         // F(0) = 1, F(1) = 1
-        long[][] F = { { 1, 0 }, { 0, 0 } };
+        long[][] F = {{1, 0}, {0, 0}};
 
         // Multiply matrix M (n - 1) times
         long[][] res = power(M, n - 1);
@@ -60,7 +56,7 @@ public class MatrixExponentiation {
         // Multiply resultant with matrix F
         multiply(res, F);
 
-        return (int)((res[0][0]) % MOD);
+        return (int) ((res[0][0]) % MOD);
     }
 
     public static void main(String[] args) {
