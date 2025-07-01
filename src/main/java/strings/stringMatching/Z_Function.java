@@ -1,7 +1,6 @@
 package strings.stringMatching;
 
 public class Z_Function {
-
     // Function to search all occurrences of pattern in text
     public static void search(String text, String pattern) {
         String concat = pattern + "$" + text;  // Combine pattern and text
