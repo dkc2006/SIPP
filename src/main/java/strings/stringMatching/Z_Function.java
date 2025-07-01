@@ -1,3 +1,5 @@
+package strings.stringMatching;
+
 public class Z_Function {
 
     // Function to search all occurrences of pattern in text
